@@ -2,11 +2,19 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
+import           Hakyll.Core.Configuration
 
+config :: Configuration
+config = defaultConfiguration
+        { deployCommand = "rsync -avz -e ssh ./_site/ haskellbook.com:/var/www/haskellbook.com/"}
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith config $ do
+    match "js/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
