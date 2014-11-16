@@ -1,0 +1,31 @@
+body {
+    background-color: #fff;
+    color: black;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    margin: 0px auto 0px auto;
+    width: 700px;
+}
+
+h1, h2, h3, h4, h5, p {
+    font-family: "Open Sans", sans-serif;
+}
+
+pre {
+  font-family: ubuntu mono, monospace;
+}
+
+code {
+  background: #eee;
+  color: #4F4371;
+  font-family: ubuntu mono, monospace;
+}
+
+.darkbg {
+    background-image: linear-gradient(to right, rgb(25, 17, 31) 0%, rgb(44, 30, 55) 100%);
+}
+
+div#footer {
+    position: absolute;
+    bottom: 0;
+}
