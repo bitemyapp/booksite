@@ -11,11 +11,11 @@ body {
 }
 
 #header {
-    height: 128px;
-    line-height: 128px;
+    height: 96px;
+    line-height: 96px;
     text-align: center;
-    margin-bottom: 24px;
 }
+
 
 #header h1 {
     color: white;
@@ -49,4 +49,13 @@ div#footer {
 
 .clear {
     clear: left;
+}
+
+.top-bar {
+    background-image: linear-gradient(to right, rgb(25, 17, 31) 0%, rgb(44, 30, 55) 100%);
+    margin-bottom: 24px;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+    background-color: transparent !important;
 }

@@ -39,4 +39,16 @@ main = hakyllWith config $ do
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
 
+    match "support.html" $ do
+        route idRoute
+        compile $ do
+            let indexCtx =
+                    constField "title" "Support"                `mappend`
+                    defaultContext
+
+            getResourceBody
+                >>= applyAsTemplate indexCtx
+                >>= loadAndApplyTemplate "templates/default.html" indexCtx
+                >>= relativizeUrls
+
     match "templates/*" $ compile templateCompiler
