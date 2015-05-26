@@ -8,6 +8,17 @@ config :: Configuration
 config = defaultConfiguration
         { deployCommand = "rsync -avz -e ssh ./_site/ haskellbook.com:/var/www/haskellbook.com/"}
 
+contentPage title = do
+  route idRoute
+  compile $ do
+    let indexCtx =
+          constField "title" title `mappend` defaultContext
+
+    getResourceBody
+      >>= applyAsTemplate indexCtx
+      >>= loadAndApplyTemplate "templates/default.html" indexCtx
+      >>= relativizeUrls
+
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyllWith config $ do
@@ -27,28 +38,12 @@ main = hakyllWith config $ do
         route   idRoute
         compile compressCssCompiler
 
-    match "index.html" $ do
-        route idRoute
-        compile $ do
-            let indexCtx =
-                    constField "title" "Home"                `mappend`
-                    defaultContext
+    match "index.html" (contentPage "Home")
 
-            getResourceBody
-                >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.html" indexCtx
-                >>= relativizeUrls
+    match "support.html" (contentPage "Support")
 
-    match "support.html" $ do
-        route idRoute
-        compile $ do
-            let indexCtx =
-                    constField "title" "Support"                `mappend`
-                    defaultContext
+    match "progress.html" (contentPage "Progress")
 
-            getResourceBody
-                >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.html" indexCtx
-                >>= relativizeUrls
+    match "faq.html" (contentPage "FAQ")
 
     match "templates/*" $ compile templateCompiler
