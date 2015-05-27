@@ -17,3 +17,6 @@ deploy: clean build
 
 watch: clean
 	${CMD} watch
+
+getsample:
+	cp ../fpbook/releases/sample_current.pdf ./images/sample.pdf
