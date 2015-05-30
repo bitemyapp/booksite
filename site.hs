@@ -47,3 +47,7 @@ main = hakyllWith config $ do
     match "faq.html" (contentPage "FAQ")
 
     match "templates/*" $ compile templateCompiler
+
+    match "google99d5b04124accf30.html" $ do
+        route   idRoute
+        compile copyFileCompiler
