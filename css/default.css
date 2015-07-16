@@ -59,3 +59,7 @@ div#footer {
 .top-bar-section li:not(.has-form) a:not(.button) {
     background-color: transparent !important;
 }
+
+div.quote {
+    margin-bottom: 25px;
+}

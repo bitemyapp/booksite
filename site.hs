@@ -44,6 +44,10 @@ main = hakyllWith config $ do
 
     match "progress.html" (contentPage "Progress")
 
+    match "feedback.html" (contentPage "Feedback")
+
+    match "authors.html" (contentPage "Authors")
+
     match "faq.html" (contentPage "FAQ")
 
     match "templates/*" $ compile templateCompiler

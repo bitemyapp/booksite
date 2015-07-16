@@ -1,10 +1,9 @@
 all: deploy
 
-CMD=./dist/build/site/site
+CMD=stack exec -- site
 
 cabal-build:
-	cabal clean
-	cabal build
+	stack build
 
 clean:
 	${CMD} clean
