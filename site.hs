@@ -50,4 +50,6 @@ main = hakyllWith config $ do
 
     match "faq.html" (contentPage "FAQ")
 
+    match "tools.html" (contentPage "Tools")
+
     match "templates/*" $ compile templateCompiler
