@@ -5,9 +5,13 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+img {
+    max-width: 75%;
+    height: auto;
+}
+
 #content {
     margin: 0px auto 0px auto;
-    width: 960px;
 }
 
 #header {
