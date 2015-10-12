@@ -5,6 +5,10 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+.top-bar-section ul li>a {
+    font-size: 1rem;
+}
+
 img {
     max-width: 75%;
     height: auto;
