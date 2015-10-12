@@ -53,3 +53,7 @@ main = hakyllWith config $ do
     match "tools.html" (contentPage "Tools")
 
     match "templates/*" $ compile templateCompiler
+
+    match "robots.txt" $ do
+        route idRoute
+        compile copyFileCompiler
