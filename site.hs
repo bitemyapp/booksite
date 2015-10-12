@@ -19,6 +19,12 @@ contentPage title = do
       >>= loadAndApplyTemplate "templates/default.html" indexCtx
       >>= relativizeUrls
 
+cleanIndexHtmls :: Item String -> Compiler (Item String)
+cleanIndexHtmls = return . fmap (replaceAll pattern replacement)
+    where
+      pattern = "/index.html"
+      replacement = const "/"
+
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyllWith config $ do
@@ -55,5 +61,9 @@ main = hakyllWith config $ do
     match "templates/*" $ compile templateCompiler
 
     match "robots.txt" $ do
+        route idRoute
+        compile copyFileCompiler
+
+    match "sitemap.xml" $ do
         route idRoute
         compile copyFileCompiler
