@@ -6,7 +6,7 @@ import           Hakyll.Core.Configuration
 
 config :: Configuration
 config = defaultConfiguration
-        { deployCommand = "rsync -avz -e ssh ./_site/ haskellbook.com:/var/www/haskellbook.com/ && rsync -avz -e ssh ./google99d5b04124accf30.html haskellbook.com:/var/www/haskellbook.com/google99d5b04124accf30.html"}
+        { deployCommand = "chmod 644 images/* && rsync -avz -e ssh ./_site/ haskellbook.com:/var/www/haskellbook.com/ && rsync -avz -e ssh ./google99d5b04124accf30.html haskellbook.com:/var/www/haskellbook.com/google99d5b04124accf30.html"}
 
 contentPage title = do
   route idRoute
