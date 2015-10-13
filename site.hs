@@ -1,13 +1,12 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
 import           Hakyll
-import           Hakyll.Core.Configuration
 
 config :: Configuration
 config = defaultConfiguration
         { deployCommand = "chmod 644 images/* && rsync -avz -e ssh ./_site/ haskellbook.com:/var/www/haskellbook.com/ && rsync -avz -e ssh ./google99d5b04124accf30.html haskellbook.com:/var/www/haskellbook.com/google99d5b04124accf30.html"}
 
+contentPage :: String -> Rules ()
 contentPage title = do
   route idRoute
   compile $ do
@@ -19,13 +18,6 @@ contentPage title = do
       >>= loadAndApplyTemplate "templates/default.html" indexCtx
       >>= relativizeUrls
 
-cleanIndexHtmls :: Item String -> Compiler (Item String)
-cleanIndexHtmls = return . fmap (replaceAll pattern replacement)
-    where
-      pattern = "/index.html"
-      replacement = const "/"
-
---------------------------------------------------------------------------------
 main :: IO ()
 main = hakyllWith config $ do
     match "js/*" $ do
