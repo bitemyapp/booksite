@@ -5,6 +5,10 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+blockquote p {
+    color: #222;
+}
+
 .top-bar-section ul li>a {
     font-size: 1rem;
 }

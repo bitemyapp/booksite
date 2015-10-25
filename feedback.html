@@ -9,7 +9,51 @@ title: Feedback
     <div class="large-12 columns quote">
       <blockquote>
         <p>
-          Despite it still being in development with many expansions to come, my experience with the current 800 pages of Haskell Programming has quelled any skepticism I had about its thoroughness or potential use to someone who had already spent two very devoted months studying Haskell. Having read books, blogs, and participated in Haskell's IRC channels during all of that period, thus covering most of the topics that are in the book, I felt like this would end up being more of the same: something that's useful (retreading over similar ground genuinely builds skill and understanding), but perhaps not an optimal use of my time (there are plenty of resources that already exist with which a person can do that, and I felt most suited to 'intermediate' resources).
+          Forgive my verbose review. As Blaise Pascal said, "I would have written a shorter letter, but I did not have the time".
+        </p>
+        <p>
+When we program in Haskell, its simplicity lets us cleanly describe our precise meanings. This is a very good thing. Like all good things this takes work and practice. Haskell's simplicity can lull you into thinking that it should be as straightforward to learn as the "Next Bandwagon Language."
+Precisely because of this, we must take special care to learn it in small pieces, with much practice as we do so, to ensure our understanding. This language is DEEP, and we do not want to drown.
+Go too fast, skip ahead too far, or push things, and this simplicity will overrun us. Perhaps we get too frustrated, maybe toss it away; this would be a true pity. Please, don't do this. <em>Pace yourself</em>.
+        </p>
+        <p>
+Chris and Julie know these tendencies. They understand the landscape of teaching and learning Haskell well, and they are happy to be your eloquent guides through what is traditionally a minefield. They cheerfully come to this task with a well-reasoned, thoughtfully prepared, staged approach.
+        </p>
+        <p>
+First, rivalling most math textbooks in clarity, they concisely explain the way math functions work (in the Lambda Calculus), then it's on to Haskell starting at Functions, after which, the ways of categorising data (Types), then categorising and connecting functions to certain Types (Typeclasses). Advanced functions are described: functions that use other functions to do their work (Higher Order Functions and Combinators).
+        </p>
+        <p>
+These blocks are used to explain the composition of types together (Algebraic Data Types). This topic is the portal to most of the very interesting things in Haskell: the "Monad" track. With these Algebraic Types, Haskell has the ability to allow the programmer to write down not only the types, but also their context! This is one of the simple, special things that sets Haskell apart. 
+        </p>
+        <p>
+With Algebraic Data Types and Typeclasses, it's explained, we gain the ability to connect functions up to data, in a named context. This explicit naming is important! The first of these are ways to “join" sets of data together generically, called Monoid and Semigroup.
+        </p>
+        <p>
+After this, Chris and Julie introduce the typeclass that gives us a way to map an ordinary function across a set of data in a context: the Functor!
+        </p>
+        <p>
+Then they move to having and applying functions AND data inside a context: the Applicative Functor.
+Finally, we get to Monads. This is a typeclass that lets you make types that compose chains of functionality inside a context, and ways to potentially move this data in and out of that context. Viewed from this modular stack of understanding and knowledge, <strong>Monads seem almost disappointingly obvious</strong>.
+        </p>
+        <p>
+You might find yourself wondering what all of the hype of difficulty was about as you read this book, but don't mistake this for luck or a fluke: this is the genius of Chris and Julie's excellent choice in topic ordering, well-rounded explanations and step-by-step introduction: they leave no gaps! It's all so simple, that it seems obvious in hindsight, but this is simply good design.
+        </p>
+        <p>
+I've learned many languages in my 20+ years as a professional programmer, and this is the most elegant - not because it has somehow perfect syntax or anything as floridly bombastic as that. It's elegant because it stands on the shoulders of the best programming language ever created: math. It's elegant because it helps us to write correct programs by having an excellent type system. Lastly, it's elegant because it doesn't propose to be finished yet, and because of this, doesn't limit our thought; rather, it magnifies it. Haskell is ever being worked on, extended, and explored. Haskell actually does permit reuse - I mean, REALLY does - and affords all of us the ability to rub mental shoulders with some of the best programmers there are. It doesn’t trap you in a box of its own limitations. It encourages that you explore, and it actually improves our understanding by its use.
+        </p>
+        <p>
+As programmers, we need to learn math to really understand our problems and make robust, good software. Haskell makes it possible, joyful, clear, and approachable. In a similar way, this book makes learning Haskell possible, joyful, clear, and approachable. It doesn't talk down to you as you read it, and its authors are happy to put the huge effort required in to making the sharing of Haskell's foundational in-plain-sight secrets a delightful, fun, experience. Let me assure you, this is no small feat. Buy this book! Expect to learn a lot, work hard and enjoy the fruits of your labour.
+        </p>
+      </blockquote>
+      &mdash; Julian Leviston
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns quote">
+      <blockquote>
+        <p>
+          Despite it still being in development with many expansions to come, my experience with the current 800 pages (now 912) of Haskell Programming has quelled any skepticism I had about its thoroughness or potential use to someone who had already spent two very devoted months studying Haskell. Having read books, blogs, and participated in Haskell's IRC channels during all of that period, thus covering most of the topics that are in the book, I felt like this would end up being more of the same: something that's useful (retreading over similar ground genuinely builds skill and understanding), but perhaps not an optimal use of my time (there are plenty of resources that already exist with which a person can do that, and I felt most suited to 'intermediate' resources).
           </p>
         <p>
 Yet, Haskell Programming is so damn comprehensive, and so well structured, that it provided me with something that no other resource has been able to: an assurance that once I make it through a chapter, I will have learned the most critical things about its topic, and that anything which demands further elaboration ought to (and will be) addressed later on where it can be more deeply understood. So far the book has been very thorough about addressing each topic in as much depth as is sensible. I was tempted to skip the earlier chapters, but I'm very glad I didn't, and that the book clearly expresses why doing so is a bad idea in its introduction. Though it is targeted towards beginners, it ramps up at every chance it gets; it just doesn't want to make you lift weights before having you stretch. It is neither simple nor inaccessible, which is about perfect for learning.
@@ -18,7 +62,7 @@ Yet, Haskell Programming is so damn comprehensive, and so well structured, that 
 Here's a short list of what I learned in those chapters that seemed like old news to me: I never really learned much about the Lambda Calculus, nor realized how much it explains how Haskell actually evaluates functions. I thought I'd understood Lists, but I'd never even heard the term "weak-head normal form". I supposed I was good at folds, but didn't realize that I could be great at them if my mental image of how they worked was enhanced. I figured I knew what data types were, but didn't have a deep intuition for the relationship between a type constructor and kinds, and a data constructor and algebra; I had no idea that learning why the hell | meant the data was a 'sum type' how having two or more arguments made it a 'product type' would actually be useful for reasons other that not impressing people with your boring knowledge (turns out they help you reason about code complexity and make smarter decisions with your data structures). I finally understand why a newtype is useful for reasons other than performance. I realized just how conceptually similar a Monoid + Functor and an Applicative Functor are.
         </p>
         <p>
-          Haskell Programming has thus put an end to the always-trying-to-figure-out-which-resource-is-best optimizing attitude that drove me from resource to resource in search of an understanding that usually takes more time and focus than most of them offer. Haskell has a sizable ecosystem, but it's really more for people who are 'intermediate' and above, and it turns out that intermediate Haskell knowledge is quite the tall order. Thankfully, this book's express goal is to take us there. Yes, you can learn Haskell without Haskell Programming, but with it you'll have one of the best inanimate companions you could hope for in that journey. It promises depth, and it really does offer it. It promises comprehensiveness, and I direct your attention to the current page count and pending additions. It promises clarity, and I promise you it has it. I also promise you that you won't learn Haskell more quickly any other way right now. If you're new to the language, have studied it for a couple of months, or basically are anyone who can't comfortably read through a library on Hackage right now, you'd probably love this book. Otherwise, you should probably read it anyways as a lesson on pedagogy.
+          Haskell Programming has thus put an end to the always-trying-to-figure-out-which-resource-is-best optimizing attitude that drove me from resource to resource in search of an understanding that usually takes more time and focus than most of them offer. Haskell has a sizable ecosystem, but it's really more for people who are 'intermediate' and above, and it turns out that intermediate Haskell knowledge is quite the tall order. Thankfully, this book's express goal is to take us there. Yes, you can learn Haskell without Haskell Programming, but with it you'll have one of the best inanimate companions you could hope for in that journey. It promises depth, and it really does offer it. It promises comprehensiveness, and I direct your attention to the current page count and pending additions. <strong>It promises clarity, and I promise you it has it</strong>. I also promise you that you won't learn Haskell more quickly any other way right now. If you're new to the language, have studied it for a couple of months, or basically are anyone who can't comfortably read through a library on Hackage right now, you'd probably love this book. Otherwise, you should probably read it anyways as a lesson on pedagogy.
           </p>
       </blockquote>
       &mdash; Nicholas Montaño
