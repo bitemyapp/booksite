@@ -64,7 +64,7 @@ div#footer {
 }
 
 .top-bar {
-    background-image: linear-gradient(to right, rgb(25, 17, 31) 0%, rgb(44, 30, 55) 100%);
+    /* background-image: linear-gradient(to right, rgb(25, 17, 31) 0%, rgb(44, 30, 55) 100%); */
     margin-bottom: 24px;
 }
 
