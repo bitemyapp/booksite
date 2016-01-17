@@ -49,6 +49,24 @@ title: Frequently Asked Questions
       The long and short of it is that we'd rather equip you to learn
       <em>anything you want</em> rather than teach you a particular library or framework.
     </p>
+    <li>What do I do if I can't build something?</li>
+    If you get an error like the following on Mac OS X:
+    <pre>
+    $ cabal build 
+Building hello-haskell-0.1.0.0... 
+Preprocessing executable 'hello-haskell' for hello-haskell-0.1.0.0... 
+Linking dist/build/hello-haskell/hello-haskell ... 
+couldn't understand kern.osversion `14.5.0' 
+couldn't understand kern.osversion `14.5.0' 
+ld: -rpath can only be used when targeting Mac OS X 10.5 or later 
+collect2: ld returned 1 exit status
+    </pre>
+    <p>
+    Then you have a very old version of gcc, probably also of XCode. Uninstall whatever you currently have and reinstall a recent version of XCode. Alternately, you may be able to get a friendly version of GHC via <a href="http://brew.sh/">Homebrew</a>.
+    </p>
+    <p>
+       However, if you aren't running Mac OS X and didn't get an error like the above, we <em>strongly</em> recommend using <a href="http://haskellstack.org">Stack</a> to use GHC, GHCi, and build your packages. We've made <a href="https://www.youtube.com/watch?v=sRonIB8ZStw">a Youtube tutorial video for learning to use Stack</a>.
+    </p>
   </ul>
 </div>
 </div>

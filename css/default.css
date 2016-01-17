@@ -9,6 +9,10 @@ blockquote p {
     color: #222;
 }
 
+blockquote {
+    margin-top: 3em;
+}
+
 .top-bar-section ul li>a {
     font-size: 1rem;
 }
