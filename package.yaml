@@ -1,0 +1,10 @@
+name: booksite
+version: '0.1.0.0'
+license: UnspecifiedLicense
+dependencies:
+- base ==4.*
+- hakyll
+executables:
+  site:
+    main: site.hs
+    ghc-options: -threaded
